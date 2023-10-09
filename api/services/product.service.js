@@ -10,7 +10,7 @@ class ProductsService {
 
   generate() {
     const limit = 100
-    for (let index = 0; index < 100; index++) {
+    for (let index = 0; index < limit; index++) {
       this.products.push({
         id: faker.string.uuid(),
         name: faker.commerce.productName(),
@@ -36,7 +36,7 @@ class ProductsService {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(this.products)
-    }, 5000);
+    }, 3000);
   })
 
   }
